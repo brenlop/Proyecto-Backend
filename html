@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Store</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Tienda en Línea</h1>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
+Crear archivo CSS:
+
+📁 static/css/styles.css
+
+css
+Copiar código
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+h1 {
+    color: darkblue;
+}
