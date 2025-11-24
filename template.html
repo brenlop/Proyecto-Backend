@@ -1,0 +1,20 @@
+templates/products/list.html
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Productos</h2>
+
+<ul>
+    {% for p in products %}
+        <li>
+            {{ p.name }} - ${{ p.price }}
+            {% if p.image %}
+                <br><img src="{{ p.image.url }}" width="120">
+            {% endif %}
+        </li>
+    {% empty %}
+        <p>No hay productos registrados.</p>
+    {% endfor %}
+</ul>
+
+{% endblock %}
